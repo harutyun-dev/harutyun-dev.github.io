@@ -5,6 +5,7 @@
 .page {
   --color-primary: #333333;
   --color-secondary: #ffffff;
+  --color-light-gray: #f1f1f1;
 
   --text-base-size: 16px;
 
@@ -27,6 +28,7 @@
   gap: var(--page-gap);
   margin: 0;
   padding: 1em;
+  background-color: var(--color-light-gray);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 1rem;
@@ -36,19 +38,29 @@
 
 @media (min-width: 1024px) {
   .page__body {
-    --page-gap: 5rem;
-    --page-direction: row;
+    --page-gap: 2.5rem;
   }
 }
 
 .page__wrapper {
+  --page-wrapper-gap: 2rem;
+
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  flex-direction: flex;
+  flex-wrap: wrap;
+  gap: var(--page-wrapper-gap);
 }
 
-.page__wrapper-section {
-  margin-bottom: auto;
+@media (min-width: 768px) {
+  .page__wrapper {
+    --page-wrapper-gap: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page__wrapper {
+    --page-wrapper-gap: 5rem;
+  }
 }
 
 /**
@@ -69,7 +81,18 @@
 }
 
 .title_size_large {
-  --title-text-size: 2.5rem;
+  --title-text-size: 2rem;
+}
+
+/**
+ * image
+ */
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border: 0.1em solid var(--color-primary);
+  border-radius: 0.5rem;
 }
 
 /**
@@ -78,6 +101,7 @@
 
 .text {
   margin: 0;
+  line-height: 1.5;
 }
 
 /**
@@ -112,11 +136,65 @@
   margin-bottom: 0.75rem;
 }
 
-.section_type_info {
+/**
+ * info
+ */
+
+.info {
+  --info-direction: column;
+  --info-gap: 0.5rem;
+
+  display: flex;
+  flex-direction: var(--info-direction);
+  gap: var(--info-gap);
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .info {
+    --info-direction: row;
+    --info-gap: 2rem;
+  }
+}
+
+.info__content {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  flex-shrink: 0;
+}
+
+.info__title,
+.info__text {
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .info__text {
+    max-width: 560px;
+  }
+}
+
+.info__location {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .info__location {
+    margin-bottom: auto;
+  }
+}
+
+.info__location-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.info__section {
+  margin-top: 1.25rem;
 }
 
 /**
@@ -141,7 +219,12 @@
   border-bottom: 0.1em solid currentColor;
 }
 
-.link:hover {
+.link:hover,
+.link:focus-visible {
   color: var(--color-secondary);
   background-color: var(--color-primary);
+}
+
+.link:focus {
+  outline: none;
 }

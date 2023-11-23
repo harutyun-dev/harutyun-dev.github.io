@@ -7,30 +7,69 @@
     <link rel="stylesheet" href="assets/styles/index.css" />
   </head>
   <body class="page__body">
-    <section class="section section_type_info">
-      <h1 class="title title_size_large">Harutyun Karapetyan</h1>
-      <p class="section__text text">
-        Hi! I am a front-end web-developer. I live in Yerevan
-      </p>
+    <figure class="info">
       <picture>
         <source
           srcset="
-            assets/images/avatar@1x.webp 1x,
-            assets/images/avatar@2x.webp 2x
+            assets/images/avatar/avatar@1x.webp 1x,
+            assets/images/avatar/avatar@2x.webp 2x
           "
           type="image/webp"
         />
         <img
-          src="assets/images/avatar@1x.png"
-          srcset="assets/images/avatar@2x.png 2x"
+          class="image"
+          src="assets/images/avatar/avatar@1x.png"
+          srcset="assets/images/avatar/avatar@2x.png 2x"
           width="320"
           height="320"
           alt="Harutyun Karapetyan"
         />
       </picture>
-    </section>
+      <figcaption class="info__content">
+        <h1 class="info__title title title_size_large">Harutyun Karapetyan</h1>
+        <p class="info__text text">
+          Hi! I am a front-end web-developer. I strive to create barrier-free
+          interfaces, ensuring high functionality and user convenience
+        </p>
+        <p class="info__location text">
+          <img
+            class="info__location-icon"
+            src="assets/images/icons/location.svg"
+            aria-hidden="true"
+            alt=""
+          />
+          Armenia, Yerevan
+        </p>
+        <div class="info__section section">
+          <h2 class="section__text title">Social networks</h2>
+          <div class="social-networks">
+            <a
+              class="link"
+              href="https://t.me/harutyun_dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Telegram</a
+            >
+            <a
+              class="link"
+              href="https://twitter.com/harutyun_dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Twitter</a
+            >
+            <a
+              class="link"
+              href="https://github.com/harutyun-dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Github</a
+            >
+          </div>
+        </div>
+      </figcaption>
+    </figure>
     <div class="page__wrapper">
-      <section class="page__wrapper-section section">
+      <section class="section">
         <h2 class="section__text title">Skills</h2>
         <ul class="list">
           <li class="list__item">HTML</li>
@@ -64,8 +103,6 @@
           </li>
         </ul>
       </section>
-    </div>
-    <div class="page__wrapper">
       <section class="section">
         <h2 class="section__text title">Projects</h2>
         <ul class="list list_type_secondary">
@@ -111,32 +148,6 @@
             <p class="text">Jewelry brand</p>
           </li>
         </ul>
-      </section>
-      <section class="section">
-        <h2 class="section__text title">Social networks</h2>
-        <div class="social-networks">
-          <a
-            class="link"
-            href="https://t.me/harutyun_dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Telegram</a
-          >
-          <a
-            class="link"
-            href="https://twitter.com/harutyun_dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Twitter</a
-          >
-          <a
-            class="link"
-            href="https://github.com/harutyun-dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Github</a
-          >
-        </div>
       </section>
     </div>
   </body>
